@@ -7,11 +7,23 @@
 .header {
   background-color: #3556ab;
   padding-top: 41px;
-  padding-bottom: 54px;
+  padding-bottom: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 15%);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header > button {
+  height: 35px;
+  width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 15%);
+  color: #ffffff;
+  border: 0px;
 }
 
 .header > p {
@@ -49,6 +61,7 @@
 
 .btns {
   display: flex;
+  flex-direction: column-reverse;
   gap: 10px;
   padding-left: 17px;
   padding-right: 22px;
@@ -83,8 +96,28 @@
   color: #ffffff;
   text-shadow: 0px 1px 0px #000000;
   padding: 20px 0px;
-  width: 121px;
+  width: 100%;
   font-size: 18px;
   box-shadow: inset 0px 3px 1px 0px rgba(168, 181, 222, 50%),
     0px 4px 4px 0px rgba(0, 0, 0, 25%);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 41px;
+    padding-bottom: 54px;
+    justify-content: center;
+  }
+
+  .header > button {
+    display: none;
+  }
+
+  .btns {
+    flex-direction: row;
+  }
+
+  .delete_btn {
+    width: 121px;
+  }
 }

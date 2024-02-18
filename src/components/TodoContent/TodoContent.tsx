@@ -7,9 +7,10 @@ type Props = {
   selectedTodo?: Todo | null;
   onSave: (args: Omit<Todo, "checked">) => void;
   onDelete: () => void;
+  onToggle: () => void;
 };
 export const TodoContent = (props: Props) => {
-  const { selectedTodo, onDelete, onSave } = props;
+  const { selectedTodo, onDelete, onSave, onToggle } = props;
 
   const [input, setInput] = useState("");
 
@@ -23,7 +24,26 @@ export const TodoContent = (props: Props) => {
       {/* header  */}
 
       <div className={styles.header}>
+        <button onClick={onToggle}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-Width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
         <p className="">{selectedTodo ? "Edit Task" : "Add New Task"}</p>
+
+        <button className=""></button>
       </div>
 
       {/* input */}

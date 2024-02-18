@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.todo_list {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .todo_list {
+    display: block;
+  }
+}

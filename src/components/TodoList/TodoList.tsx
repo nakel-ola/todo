@@ -1,20 +1,20 @@
 import { Todo } from "../../type";
 import styles from "./styles.module.css";
 
-type Props = {
+export type TodoListProps = {
   todos: Todo[];
   onSelect: (value: Todo) => void;
   onChecked: (id: string) => void;
   onAdd: () => void;
+  onClose: () => void;
 };
-export const TodoList = (props: Props) => {
-  const { todos, onSelect, onChecked, onAdd } = props;
+export const TodoList = (props: TodoListProps) => {
+  const { todos, onSelect, onChecked, onAdd, onClose } = props;
 
   return (
     <div className={styles.container}>
-      {/* navbar */}
-
       <div className={styles.body}>
+        {/* navbar */}
         <div className={styles.header}>
           <img src="/images/user.png" alt="" className="" />
 
@@ -23,6 +23,23 @@ export const TodoList = (props: Props) => {
 
             <p className={styles.user_desc}>What are your plans for today?</p>
           </div>
+
+          <button type="button" onClick={onClose}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
         </div>
 
         {/* banner */}

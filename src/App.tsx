@@ -1,13 +1,14 @@
 import { useLocalStorage } from "usehooks-ts";
-import "./App.css";
-import { TodoContent, TodoList } from "./components";
+import { MenuCard, TodoContent, TodoList } from "./components";
 import { Todo } from "./type";
 import { useState } from "react";
+import styles from "./App.module.css";
 
 function App() {
   const [todos, setTodos] = useLocalStorage<Todo[]>("todos", []);
 
   const [selected, setSelected] = useState<Todo | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleDelete = () => {
     if (!selected) return;
@@ -52,18 +53,32 @@ function App() {
   };
 
   return (
-    <div className="wrapper">
-      <TodoList
-        todos={todos}
-        onSelect={(index) => setSelected(index)}
-        onChecked={(id) => handleChecked(id)}
-        onAdd={() => setSelected(null)}
-      />
+    <div className={styles.wrapper}>
+      <div className={styles.todo_list}>
+        <TodoList
+          todos={todos}
+          onSelect={(index) => setSelected(index)}
+          onChecked={(id) => handleChecked(id)}
+          onAdd={() => setSelected(null)}
+          onClose={() => setIsOpen(false)}
+        />
+      </div>
       <TodoContent
         selectedTodo={selected}
         onDelete={handleDelete}
         onSave={handleSave}
+        onToggle={() => setIsOpen(!isOpen)}
       />
+
+      {isOpen ? (
+        <MenuCard
+          onClose={() => setIsOpen(false)}
+          todos={todos}
+          onSelect={(index) => setSelected(index)}
+          onChecked={(id) => handleChecked(id)}
+          onAdd={() => setSelected(null)}
+        />
+      ) : null}
     </div>
   );
 }
