@@ -1,0 +1,160 @@
+.container {
+  position: relative;
+  width: 414px;
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: scroll;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 15%);
+}
+
+.header {
+  background-color: #3556ab;
+  padding-top: 19px;
+  padding-left: 32px;
+  padding-right: 90px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.header > img {
+  height: 50px;
+  width: 50px;
+  margin-right: 21px;
+}
+
+.user_name {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+.user_desc {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 100;
+  font-style: italic;
+  text-shadow: 0px 4px 4px #000000;
+}
+
+.banner {
+  background-color: #cde53d;
+  box-shadow: 0px 4px 0px 0px rgba(255, 255, 255, 10%);
+  border: 2px solid #9eb031;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 24.93px;
+  padding-top: 36px;
+  padding-bottom: 39.11px;
+}
+
+.banner img {
+  width: 53.1px;
+  height: 40.89px;
+  margin-right: 24.97px;
+}
+
+.banner > p {
+  color: #071d55;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.price_card {
+  position: absolute;
+  top: -2px;
+  right: 23.84px;
+
+  height: 71px;
+  width: 66.11px;
+  background-color: #071d55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price_card > p {
+  color: #f2c94c;
+  font-size: 18px;
+  font-family: 500;
+}
+
+.todo_list {
+  padding-top: 20px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.todo_list_item {
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 23px;
+  padding-right: 19px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 10%);
+  border-radius: 6px;
+}
+
+.todo_list_item > div {
+  display: flex;
+  align-items: center;
+}
+
+.todo_list_item > div > button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #071d55;
+  margin-right: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo_list_item > div > .checked {
+  border: 1.5px solid #49c25d;
+  background-color: #53da69;
+}
+
+.todo_list_item > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #071d55;
+}
+.todo_list_item > div > .checked_text {
+  color: #8d8d8d;
+  text-decoration: line-through;
+  text-decoration-color: 8d8d8d;
+}
+
+.todo_list_item > button {
+  height: 45px;
+  width: 51px;
+  color: #071d55;
+  border: 1px solid #071d55;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.add_btn {
+  position: absolute;
+  bottom: 25px;
+  right: 16px;
+  background-color: #3556ab;
+  height: 61px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid #123eb1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 3px 1px 0px rgba(168, 181, 222, 25%),
+    0px 4px 4px 0px rgba(0, 0, 0, 25%);
+}

@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #3556ab;
+  padding-top: 41px;
+  padding-bottom: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 15%);
+}
+
+.header > p {
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.input_card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 17px;
+  padding-right: 22px;
+  padding-top: 28px;
+}
+
+.input_card > label {
+  color: #000000;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.input {
+  border: 2px solid #cbcbcb;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  color: #0d2972;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 26.66px;
+  padding-right: 26.66px;
+  outline: 0;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  padding-left: 17px;
+  padding-right: 22px;
+  margin-top: auto;
+  padding-bottom: 28px;
+}
+
+.save_btn {
+  background-color: #3556ab;
+  width: 100%;
+  border: 2px solid #123eb1;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  color: #ffffff;
+  justify-content: center;
+  padding: 20px 0px;
+  text-shadow: 0px 1px 0px #000000;
+  font-size: 18px;
+  box-shadow: inset 0px 3px 1px 0px rgba(168, 181, 222, 25%),
+    0px 4px 4px 0px rgba(0, 0, 0, 25%);
+}
+
+.save_btn:disabled {
+  opacity: 0.6;
+}
+
+.delete_btn {
+  background-color: #ab3535;
+  border-radius: 10px;
+  border: 2px solid #720d0d;
+  color: #ffffff;
+  text-shadow: 0px 1px 0px #000000;
+  padding: 20px 0px;
+  width: 121px;
+  font-size: 18px;
+  box-shadow: inset 0px 3px 1px 0px rgba(168, 181, 222, 50%),
+    0px 4px 4px 0px rgba(0, 0, 0, 25%);
+}
