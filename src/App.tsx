@@ -19,6 +19,8 @@ function App() {
     newTodos.splice(index, 1);
 
     setTodos(newTodos);
+
+    setSelected(null);
   };
 
   const handleChecked = (id: string) => {
