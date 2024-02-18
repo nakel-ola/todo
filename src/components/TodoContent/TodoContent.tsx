@@ -44,7 +44,12 @@ export const TodoContent = (props: Props) => {
         </button>
         <p className="">{selectedTodo ? "Edit Task" : "Add New Task"}</p>
 
-        <button onClick={onAdd}>
+        <button
+          onClick={() => {
+            onAdd();
+            setInput("");
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
