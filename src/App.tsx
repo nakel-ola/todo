@@ -57,9 +57,15 @@ function App() {
       <div className={styles.todo_list}>
         <TodoList
           todos={todos}
-          onSelect={(index) => setSelected(index)}
+          onSelect={(index) => {
+            setSelected(index);
+            setIsOpen(false);
+          }}
           onChecked={(id) => handleChecked(id)}
-          onAdd={() => setSelected(null)}
+          onAdd={() => {
+            setSelected(null);
+            setIsOpen(false);
+          }}
           onClose={() => setIsOpen(false)}
         />
       </div>
@@ -67,6 +73,9 @@ function App() {
         selectedTodo={selected}
         onDelete={handleDelete}
         onSave={handleSave}
+        onAdd={() => {
+          setSelected(null);
+        }}
         onToggle={() => setIsOpen(!isOpen)}
       />
 
