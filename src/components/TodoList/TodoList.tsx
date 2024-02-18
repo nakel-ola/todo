@@ -87,7 +87,13 @@ export const TodoList = (props: TodoListProps) => {
                 </p>
               </div>
 
-              <button type="button" onClick={() => onSelect(item)}>
+              <button
+                type="button"
+                onClick={() => {
+                  onSelect(item);
+                  onClose();
+                }}
+              >
                 Edit
               </button>
             </li>
@@ -96,7 +102,14 @@ export const TodoList = (props: TodoListProps) => {
       </div>
 
       {/* add icon */}
-      <button type="button" onClick={onAdd} className={styles.add_btn}>
+      <button
+        type="button"
+        onClick={() => {
+          onAdd();
+          onClose();
+        }}
+        className={styles.add_btn}
+      >
         <img src="/images/add.svg" alt="Add Icon" />
       </button>
     </div>
